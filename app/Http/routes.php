@@ -15,7 +15,15 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('user/{id}', 'UserController@showProfile');
+
+Route::resource('v1/user', 'UserController', ['only' => ['index', 'store', 'show']]);
+
+Route::resource('v2/user', 'Userv2Controller');
+
+//Route::get('user/{id}', 'UserController@showProfile');
+
+
+
 
 /*
 |--------------------------------------------------------------------------
