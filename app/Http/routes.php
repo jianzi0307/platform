@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::resource('v1/user', 'UserController', ['only' => ['index', 'store', 'show']]);
+Route::resource('v1/user', 'UserController', ['only' => ['index', 'store', 'show', 'destroy']]);
 
 Route::resource('v2/user', 'Userv2Controller');
 
