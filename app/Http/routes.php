@@ -15,12 +15,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-Route::resource('v1/user', 'UserController', ['only' => ['index', 'store', 'show', 'destroy']]);
-
-Route::resource('v2/user', 'Userv2Controller');
-
-//Route::get('user/{id}', 'UserController@showProfile');
+Route::controller('api/v1/', 'ApiDocController');
+Route::controller('api/v1/user', 'UserController');
+//Route::resource('api/v2/user', 'Userv2Controller');
+//Route::get('api/user/{id}', 'UserController@showProfile');
 
 
 
